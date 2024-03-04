@@ -1,0 +1,13 @@
+import requests
+API_KEY = 'HxKLNvQ8.4HBCfooZf1ZLNezdqHt6P0ZB3fS2xnSp'
+your_query = 'election of president'
+headers = {
+    'Content-Type': 'application/json',
+    'Apikey': f'Api-Key {API_KEY}',
+    }
+data = {
+    "payload": your_query
+}
+url = 'https://payload.vextapp.com/hook/QAC97AJK2Q/catch/$(consti)'
+response = requests.post(url,json=data,headers=headers)
+print(response.text)
